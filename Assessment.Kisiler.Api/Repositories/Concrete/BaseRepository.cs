@@ -5,70 +5,64 @@ using System.Linq.Expressions;
 
 namespace Assessment.Kisiler.Api.Repositories.Concrete
 {
-    public class BaseRepository<T, Context> : IDisposable, IBaseRepository<T> where T : IEntity, new() where Context : DbContext, new()
+    public class BaseRepository<T> : IBaseRepository<T> where T : IEntity
     {
-        protected Context _postDbContext;
+        protected AppDbContext _appDbContext;
 
 
-        public BaseRepository(Context postDbContext)
+        public BaseRepository(AppDbContext appDbContext)
         {
-            _postDbContext = postDbContext;
+            _appDbContext = appDbContext;
         }
 
 
-        public bool Insert(T p)
+        public async Task<bool> InsertAsync(T p)
         {
-            var T = _postDbContext.Set<T>().Add(p);
-            var result = _postDbContext.SaveChanges();
+            await _appDbContext.Set<T>().AddAsync(p);
+            var result = await _appDbContext.SaveChangesAsync();
             return result > 0 ? true : false;
         }
 
-        public bool Update(T p)
+        public async Task<bool> UpdateAsync(T p)
         {
-            var T = _postDbContext.Set<T>().Update(p);
-            var result = _postDbContext.SaveChanges();
+            _appDbContext.Set<T>().Update(p);
+            var result = await _appDbContext.SaveChangesAsync();
             return result > 0 ? true : false;
         }
 
-        public bool Delete(T p)
+        public async Task<bool> DeleteAsync(T p)
         {
-            var T = _postDbContext.Set<T>().Remove(p);
-            var result = _postDbContext.SaveChanges();
+            _appDbContext.Set<T>().Remove(p);
+            var result = await _appDbContext.SaveChangesAsync();
             return result > 0 ? true : false;
         }
 
-        public ICollection<T> GetAll()
+        public async Task<ICollection<T>> GetAllAsync()
         {
-            List<T> list = _postDbContext.Set<T>().ToList();
+            List<T> list = await _appDbContext.Set<T>().AsNoTracking().ToListAsync();
             return list;
         }
 
-        public ICollection<T> GetWhere(Expression<Func<T, bool>> method)
+        public async Task<ICollection<T>> GetWhereAsync(Expression<Func<T, bool>> method)
         {
-            List<T> list = _postDbContext.Set<T>().Where(method).ToList();
+            List<T> list = await _appDbContext.Set<T>().Where(method).ToListAsync();
             return list;
         }
 
-        public T GetSingle(Expression<Func<T, bool>> method)
+        public async Task<T> GetSingleAsync(Expression<Func<T, bool>> method)
         {
-            T p = _postDbContext.Set<T>().Where(method).FirstOrDefault();
+            T p = await _appDbContext.Set<T>().Where(method).FirstOrDefaultAsync();
             return p;
         }
 
-        public T GetById(Guid id)
+        public async Task<T> GetByIdAsync(Guid id)
         {
-            T p = _postDbContext.Set<T>().Where(m => m.UUID == id).FirstOrDefault();
+            T p = await  _appDbContext.Set<T>().Where(m => m.UUID == id).FirstOrDefaultAsync();
             return p;
         }
-        public bool SaveNow()
-        {
-            var result = _postDbContext.SaveChanges();
-            return result > 0 ? true : false;
-        }
 
-        public void Dispose()
-        {
-            _postDbContext.Dispose();
-        }
+         
+
+     
     }
 }

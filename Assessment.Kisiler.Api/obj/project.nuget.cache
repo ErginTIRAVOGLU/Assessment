@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "oGJb7fK2auraiFBduUkof7W7QfUQBHCoIkiGg6hBqy0GsBqcMscnYHmQdjdNxJZlBkb09DJCUGyAFWAydjSV9Q==",
+  "dgSpecHash": "rjHajXwqX3jLDzvSJjdAuR56ROMsNfKNARGHtFB8k8PvXbiuFXGdfXAY6HczjRPJ4Q8Yn7/wEUVpelipV/GG7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ergin\\source\\repos\\Assessment\\Assessment.Kisiler.Api\\Assessment.Kisiler.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ergin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Ergin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Ergin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Ergin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.7\\microsoft.aspnetcore.openapi.7.0.7.nupkg.sha512",
+    "C:\\Users\\Ergin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Ergin\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.9\\microsoft.entityframeworkcore.7.0.9.nupkg.sha512",
     "C:\\Users\\Ergin\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.9\\microsoft.entityframeworkcore.abstractions.7.0.9.nupkg.sha512",
     "C:\\Users\\Ergin\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.9\\microsoft.entityframeworkcore.analyzers.7.0.9.nupkg.sha512",

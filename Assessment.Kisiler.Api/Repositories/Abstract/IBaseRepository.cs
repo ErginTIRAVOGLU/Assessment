@@ -5,15 +5,15 @@ namespace Assessment.Kisiler.Api.Repositories.Abstract
 {
     public interface IBaseRepository<T> where T : IEntity
     {
-        bool Insert(T p);
-        bool Update(T p);
-        bool Delete(T p);
+        Task<bool> InsertAsync(T p);
+        Task<bool> UpdateAsync(T p);
+        Task<bool> DeleteAsync(T p);
 
 
-        ICollection<T> GetWhere(Expression<Func<T, bool>> method);
-        T GetSingle(Expression<Func<T, bool>> method);
-        T GetById(Guid id);
+        Task<ICollection<T>> GetWhereAsync(Expression<Func<T, bool>> method);
+        Task<T> GetSingleAsync(Expression<Func<T, bool>> method);
+        Task<T> GetByIdAsync(Guid id);
 
-        ICollection<T> GetAll();
+        Task<ICollection<T>> GetAllAsync();
     }
 }

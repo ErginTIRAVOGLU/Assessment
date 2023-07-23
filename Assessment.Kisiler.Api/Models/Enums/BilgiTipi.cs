@@ -1,9 +1,16 @@
-﻿namespace Assessment.Kisiler.Api.Models.Enums
+﻿using System.ComponentModel;
+using System.Text.Json.Serialization;
+
+namespace Assessment.Kisiler.Api.Models.Enums
 {
+    //[JsonConverter(typeof(JsonStringEnumConverter))]
     public enum BilgiTipi
     {
-        Telefon=0,
-        EPosta=1,
-        Konum=2
+        [Description("Telefon")]
+        Telefon =0,
+        [Description("EPosta")]
+        EPosta =1,
+        [Description("Konum")]
+        Konum =2
     }
 }

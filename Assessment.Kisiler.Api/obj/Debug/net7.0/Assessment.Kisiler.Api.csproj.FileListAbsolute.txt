@@ -41,3 +41,5 @@ C:\Users\Ergin\source\repos\Assessment\Assessment.Kisiler.Api\obj\Debug\net7.0\r
 C:\Users\Ergin\source\repos\Assessment\Assessment.Kisiler.Api\obj\Debug\net7.0\Assessment.Kisiler.Api.pdb
 C:\Users\Ergin\source\repos\Assessment\Assessment.Kisiler.Api\obj\Debug\net7.0\Assessment.Kisiler.Api.genruntimeconfig.cache
 C:\Users\Ergin\source\repos\Assessment\Assessment.Kisiler.Api\obj\Debug\net7.0\ref\Assessment.Kisiler.Api.dll
+C:\Users\Ergin\source\repos\Assessment\Assessment.Kisiler.Api\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\Ergin\source\repos\Assessment\Assessment.Kisiler.Api\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

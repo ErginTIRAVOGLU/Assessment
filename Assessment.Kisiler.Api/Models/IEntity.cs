@@ -7,6 +7,6 @@ namespace Assessment.Kisiler.Api.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid UUID { get; set; }
+        public Guid UUID { get; set; }= Guid.NewGuid();
     }
 }
