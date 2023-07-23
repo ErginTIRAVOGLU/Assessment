@@ -9,6 +9,7 @@ namespace Assessment.Rapor.Api.Models
         public AppDbContext(IConfiguration configuration)
         {
             this._configuration = configuration;
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -17,6 +18,6 @@ namespace Assessment.Rapor.Api.Models
 
         }
 
-        public DbSet<Rapor> Raporlar { get; set; }
+        public DbSet<Raporlar> Raporlar { get; set; }
     }
 }

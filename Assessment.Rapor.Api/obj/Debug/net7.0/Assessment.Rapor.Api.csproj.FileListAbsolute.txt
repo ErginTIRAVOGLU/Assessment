@@ -49,3 +49,5 @@ C:\Users\Ergin\source\repos\Assessment\Assessment.Rapor.Api\bin\Debug\net7.0\Npg
 C:\Users\Ergin\source\repos\Assessment\Assessment.Rapor.Api\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Ergin\source\repos\Assessment\Assessment.Rapor.Api\bin\Debug\net7.0\RabbitMQ.Client.dll
 C:\Users\Ergin\source\repos\Assessment\Assessment.Rapor.Api\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Ergin\source\repos\Assessment\Assessment.Rapor.Api\bin\Debug\net7.0\Shared.dll
+C:\Users\Ergin\source\repos\Assessment\Assessment.Rapor.Api\bin\Debug\net7.0\Shared.pdb

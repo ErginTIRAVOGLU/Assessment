@@ -8,6 +8,6 @@ namespace Assessment.Kisiler.Api.Models
         public string Icerik { get; set; }
 
         public Guid KisiId { get; set; }
-        public Kisi Kisi { get; set; }
+        public virtual Kisi Kisi { get; set; }
     }
 }

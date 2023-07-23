@@ -42,13 +42,21 @@ namespace Assessment.Kisiler.Api.Repositories.Concrete
             List<T> list = await _appDbContext.Set<T>().AsNoTracking().ToListAsync();
             return list;
         }
-
+        public ICollection<T> GetAll()
+        {
+            List<T> list = _appDbContext.Set<T>().AsNoTracking().ToList();
+            return list;
+        }
         public async Task<ICollection<T>> GetWhereAsync(Expression<Func<T, bool>> method)
         {
             List<T> list = await _appDbContext.Set<T>().Where(method).ToListAsync();
             return list;
         }
-
+        public ICollection<T> GetWhere(Expression<Func<T, bool>> method)
+        {
+            List<T> list = _appDbContext.Set<T>().Where(method).ToList();
+            return list;
+        }
         public async Task<T> GetSingleAsync(Expression<Func<T, bool>> method)
         {
             T p = await _appDbContext.Set<T>().Where(method).FirstOrDefaultAsync();

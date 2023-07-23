@@ -20,6 +20,12 @@ namespace Assessment.Kisiler.Api.Repositories.Concrete
             return list;
         }
 
+        public ICollection<Kisi> GetWhereInc(Expression<Func<Kisi, bool>> method)
+        {
+            List<Kisi> list = _appDbContext.Set<Kisi>().Include(m => m.IletisimBilgileri).Where(method).ToList();
+            return list;
+        }
+
         public async Task<ICollection<Kisi>> GetWhereIncAsync(Expression<Func<Kisi, bool>> method)
         {
             List<Kisi> list = await _appDbContext.Set<Kisi>().Include(m => m.IletisimBilgileri).Where(method).ToListAsync();

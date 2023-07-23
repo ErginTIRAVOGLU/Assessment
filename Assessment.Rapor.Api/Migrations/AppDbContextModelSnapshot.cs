@@ -22,7 +22,33 @@ namespace Assessment.Rapor.Api.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Assessment.Rapor.Api.Models.Rapor", b =>
+            modelBuilder.Entity("Assessment.Rapor.Api.Models.RaporIcerik", b =>
+                {
+                    b.Property<Guid>("UUID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("KisiSayisi")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Konum")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("RaporlarId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("TelefonSayisi")
+                        .HasColumnType("integer");
+
+                    b.HasKey("UUID");
+
+                    b.HasIndex("RaporlarId");
+
+                    b.ToTable("RaporIcerik");
+                });
+
+            modelBuilder.Entity("Assessment.Rapor.Api.Models.Raporlar", b =>
                 {
                     b.Property<Guid>("UUID")
                         .ValueGeneratedOnAdd()
@@ -32,11 +58,27 @@ namespace Assessment.Rapor.Api.Migrations
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("TalepTarihi")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.HasKey("UUID");
 
                     b.ToTable("Raporlar");
+                });
+
+            modelBuilder.Entity("Assessment.Rapor.Api.Models.RaporIcerik", b =>
+                {
+                    b.HasOne("Assessment.Rapor.Api.Models.Raporlar", "Raporlar")
+                        .WithMany("RaporIcerigi")
+                        .HasForeignKey("RaporlarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Raporlar");
+                });
+
+            modelBuilder.Entity("Assessment.Rapor.Api.Models.Raporlar", b =>
+                {
+                    b.Navigation("RaporIcerigi");
                 });
 #pragma warning restore 612, 618
         }
