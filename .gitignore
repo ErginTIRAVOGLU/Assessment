@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Assessment.Rapor.Api/obj/Debug/net7.0/Assessment.Rapor.Api.csproj.AssemblyReference.cache
+/Assessment.Kisiler.Api/obj/Debug/net7.0/Assessment.Kisiler.Api.csproj.AssemblyReference.cache
