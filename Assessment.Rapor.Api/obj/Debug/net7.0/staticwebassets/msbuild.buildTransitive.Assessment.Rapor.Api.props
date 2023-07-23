@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Assessment.Rapor.Api.props" />
-</Project>
