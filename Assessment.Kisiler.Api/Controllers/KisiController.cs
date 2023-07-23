@@ -6,6 +6,8 @@ using Assessment.Kisiler.Api.Repositories.Concrete;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Shared;
+using System.Text.RegularExpressions;
 
 namespace Assessment.Kisiler.Api.Controllers
 {
@@ -233,7 +235,7 @@ namespace Assessment.Kisiler.Api.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-
+         
 
         [HttpGet]
         [Route("{kisiId}")]

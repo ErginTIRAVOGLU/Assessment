@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.Kisiler.Api", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.Rapor.Api", "Assessment.Rapor.Api\Assessment.Rapor.Api.csproj", "{6C28AED3-CCB9-448B-BEF5-21BC287586CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{028FEDA6-325E-4026-80E3-62A1C713516C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6C28AED3-CCB9-448B-BEF5-21BC287586CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C28AED3-CCB9-448B-BEF5-21BC287586CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C28AED3-CCB9-448B-BEF5-21BC287586CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{028FEDA6-325E-4026-80E3-62A1C713516C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028FEDA6-325E-4026-80E3-62A1C713516C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028FEDA6-325E-4026-80E3-62A1C713516C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028FEDA6-325E-4026-80E3-62A1C713516C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
