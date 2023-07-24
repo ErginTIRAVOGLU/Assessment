@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.Kisiler.Api", "Assessment.Kisiler.Api\Assessment.Kisiler.Api.csproj", "{A63681F9-8E5C-45FC-8F31-7AB1A06FF207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assessment.Kisiler.Api", "Assessment.Kisiler.Api\Assessment.Kisiler.Api.csproj", "{A63681F9-8E5C-45FC-8F31-7AB1A06FF207}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assessment.Rapor.Api", "Assessment.Rapor.Api\Assessment.Rapor.Api.csproj", "{6C28AED3-CCB9-448B-BEF5-21BC287586CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assessment.Rapor.Api", "Assessment.Rapor.Api\Assessment.Rapor.Api.csproj", "{6C28AED3-CCB9-448B-BEF5-21BC287586CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{028FEDA6-325E-4026-80E3-62A1C713516C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{028FEDA6-325E-4026-80E3-62A1C713516C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

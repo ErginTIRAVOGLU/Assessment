@@ -1,5 +1,6 @@
 using Assessment.Kisiler.Api.Consumers;
 using Assessment.Kisiler.Api.Models;
+using Assessment.Kisiler.Api.Repositories.Abstract;
 using Assessment.Kisiler.Api.Repositories.Concrete;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;

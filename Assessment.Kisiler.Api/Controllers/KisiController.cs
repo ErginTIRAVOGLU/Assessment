@@ -29,6 +29,10 @@ namespace Assessment.Kisiler.Api.Controllers
             _iletisimBilgisiRepository = iletisimBilgisiRepository;
         }
 
+       
+
+        
+
         [HttpPost]      
         public async Task<IActionResult> AddKisi(KisiDto kisi)
         {
@@ -260,5 +264,7 @@ namespace Assessment.Kisiler.Api.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        
     }
 }

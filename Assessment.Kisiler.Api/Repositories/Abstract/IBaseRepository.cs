@@ -15,5 +15,6 @@ namespace Assessment.Kisiler.Api.Repositories.Abstract
         Task<T> GetByIdAsync(Guid id);
 
         Task<ICollection<T>> GetAllAsync();
+ 
     }
 }

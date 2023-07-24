@@ -14,6 +14,8 @@ namespace Assessment.Kisiler.Api.Repositories.Concrete
             _appDbContext = appDbContext;
         }
 
+        
+
         public async Task<ICollection<Kisi>> GetAllIncAsync()
         {
             List<Kisi> list = await _appDbContext.Set<Kisi>().Include(m=>m.IletisimBilgileri).AsNoTracking().ToListAsync();
@@ -43,6 +45,10 @@ namespace Assessment.Kisiler.Api.Repositories.Concrete
             Kisi p = await _appDbContext.Set<Kisi>().Include(m => m.IletisimBilgileri).Where(m => m.UUID == id).FirstOrDefaultAsync();
             return p;
         }
-
+        public async Task<IEnumerable<Kisi>> GetRandomKisiler(int count)
+        {
+            List<Kisi> list = await _appDbContext.Set<Kisi>().Take(count).ToListAsync();
+            return list;
+        }
     }
 }
