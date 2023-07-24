@@ -22,3 +22,10 @@ Projelerin içerisinde bulunan appsettings.json dosyasından PostgreSql ve Rabbi
 ![Raporlar](https://github.com/ErginTIRAVOGLU/Assessment/blob/main/scRaporlar.png)
 
   
+
+## Kullanılan Teknolojiler
+
+- NET Core
+- Git
+- Postgres veritabanı
+- RabbitMQ Message Queue sistemi
